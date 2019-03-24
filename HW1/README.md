@@ -2,7 +2,7 @@
 
 ## The work is implement on python 3.7.2, keras(2.2.4), h5py(2.9.0), numpy(1.16.2), matplotlib(3.0.3).
 
-###1-3-1:
+### 1-3-1:
 Run “partial_random_label.py” to shuffle different ratio of label
 Run “partial_random_label_plot.py”  to plot the chart
 
