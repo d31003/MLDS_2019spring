@@ -3,8 +3,7 @@
 This is a MLDS practice implemented on python 3.6.8, keras(2.2.4), h5py(2.9.0), numpy(1.14.5), tensorflow-gpu(1.9.0).
 
 
-
-Data sets : <https://drive.google.com/drive/folders/1kwKemVE8CZqjv1e2p72JnL2eeWjKJOQ0?fbclid=IwAR3FeMaGQ7-B9KjE4cQvlN3FuElRnxOznpLVseERNwLOHNWeze9TpNlGf5E>
+[Download Data sets](<https://drive.google.com/drive/folders/1kwKemVE8CZqjv1e2p72JnL2eeWjKJOQ0?fbclid=IwAR3FeMaGQ7-B9KjE4cQvlN3FuElRnxOznpLVseERNwLOHNWeze9TpNlGf5E>)
 
 To parse the datasets into json ditionaries:
 
