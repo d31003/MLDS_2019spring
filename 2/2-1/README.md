@@ -48,3 +48,12 @@ To train and test the model on training and testing sets:
 ```
 python3 s2s-att.py
 ```
+### Embedding 
+
+```
+python3 att_emb_test.py
+python3 att_emb_load.py
+```
+Implement of models using a embedding layer instead of one-hot encoding
+"att_emb_load.py" loads the training model and continue training it.
+
