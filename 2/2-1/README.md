@@ -10,6 +10,8 @@ To parse the datasets into json ditionaries:
 
 ```bash
 python3 read.py
+or
+python3 dictionary.py
 ```
 
 
