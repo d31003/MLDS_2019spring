@@ -10,7 +10,6 @@ import h5py
 import json
 import tensorflow as tf
 
-EPOCH=2000
 
 with open ('dictionary.json', 'r') as f:
     dictionary = json.load(f)
@@ -62,7 +61,7 @@ train_label=np.array(train_label)
 # configure
 num_encoder_tokens = 4096
 num_decoder_tokens = len(dictionary)
-latent_dim = 256
+latent_dim = 512
 
 out = [] # first decoder input
 for i in range(1450):
@@ -93,9 +92,9 @@ model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
 # print the model
 print(model.summary())
 model.compile(loss='categorical_crossentropy',optimizer='adam')#,metrics=['accuracy']
-Result=model.fit([train_data,gt],train_label,epochs=EPOCH,batch_size=10,verbose=1,shuffle=True)#,validation_data=(test_array_normalize, test_label_array)
+Result=model.fit([train_data,gt],train_label,epochs=300,batch_size=10,verbose=1,shuffle=True)#,validation_data=(test_array_normalize, test_label_array)
 
-model.save('s2s_basic_epoch{}.h5'.format(EPOCH))
+model.save('s2s_basic_dim512.h5')
 
 
 ### PREDICT (INFERNECE)
@@ -166,7 +165,6 @@ def decode_sequence(input_seq):
         ini_decoder_input=np.array(ini_decoder_input)
 
     for i in range(100):
-        print(decoded_sentence)
         tem = decoded_sentence[i].split("<PAD>",1)
         decoded_sentence[i]=tem[0]
         tem = decoded_sentence[i].split("<EOS>",1)
@@ -182,5 +180,5 @@ for i in range(len(ID)):
     answer+= (ID[i] + ',' + d_s[i] + '\n')
 
 
-f=open('s2s_basic_epoch{}.txt'.format(EPOCH),'w')
+f=open('s2s_basic_dim512.txt','w')
 f.write(answer)
