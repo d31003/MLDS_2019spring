@@ -7,6 +7,6 @@ HW from MLDS
 3. Generalization---See detail in HW1/1-3
 
 ## HW2 Sequnce to Sequence Model
-1. LSTM on Video Caption---See detail in HW2/2-1
-2. Chatbot---See detail in HW2/2-2
+1. LSTM on Video Caption---See detail in 2/2-1
+2. Chatbot---See detail in 2/2-2
 
