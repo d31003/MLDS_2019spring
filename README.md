@@ -8,5 +8,5 @@ HW from MLDS
 
 ## HW2 Sequnce to Sequence Model
 1. LSTM on Video Caption---See detail in HW2/2-1
-2. Chatbot
+2. Chatbot---See detail in HW2/2-2
 
