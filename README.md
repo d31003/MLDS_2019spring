@@ -10,3 +10,11 @@ HW from MLDS
 1. LSTM on Video Caption---See detail in 2/2-1
 2. Chatbot---See detail in 2/2-2
 
+## HW3 GAN
+1. GAN model---See detail in HW3/3-1
+2. Text 2 Image Generation---See detail in HW3/3-2
+3. Cycle GAN---Not uploaded
+
+## HW4 Reinforcement Learning
+1. 
+
