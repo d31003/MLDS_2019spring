@@ -16,5 +16,7 @@ HW from MLDS
 3. Cycle GAN---Not uploaded
 
 ## HW4 Reinforcement Learning
-1. 
+1. Policy Gradient---See detail in HW4/
+2. Deep Q learning---See detail in HW4/
+3. A3C---See detail in HW4/
 
