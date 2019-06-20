@@ -15,6 +15,10 @@ def parse():
     parser.add_argument('--train_pg', action='store_true', help='whether train policy gradient')
     parser.add_argument('--train_pg_improved', action='store_true', help='whether train PPO')
     parser.add_argument('--train_dqn', action='store_true', help='whether train DQN')
+    parser.add_argument('--train_pong_ac', action='store_true', help='whether train pong ac')
+    parser.add_argument('--train_break_ac', action='store_true', help='whether train break ac')
+    parser.add_argument('--train_pong_ac_improved', action='store_true', help='whether train pong ac improved')
+    parser.add_argument('--train_break_ac_improved', action='store_true', help='whether train break ac improved')
     parser.add_argument('--test_pg', action='store_true', help='whether test policy gradient')
     parser.add_argument('--test_pg_improved', action='store_true', help='whether test PPO')
     parser.add_argument('--test_dqn', action='store_true', help='whether test DQN')
@@ -61,6 +65,34 @@ def run(args):
         env = Environment(env_name, args, atari_wrapper=True)
         from agent_dir.agent_dqn_improved import Agent_DQN
         agent = Agent_DQN(env, args)
+        agent.train()
+    
+    if args.train_pong_ac:
+        env_name = args.env_name or 'Pong-v0'
+        env = Environment(env_name, args)
+        from agent_dir.agent_pong_ac import Agent_AC
+        agent = Agent_AC(env, args)
+        agent.train()
+    
+    if args.train_break_ac:
+        env_name = args.env_name or 'BreakoutNoFrameskip-v4'
+        env = Environment(env_name, args, atari_wrapper=True)
+        from agent_dir.agent_break_ac import Agent_AC
+        agent = Agent_AC(env, args)
+        agent.train()
+    
+    if args.train_pong_ac_improved:
+        env_name = args.env_name or 'Pong-v0'
+        env = Environment(env_name, args)
+        from agent_dir.agent_pong_ac_improved import Agent_AC
+        agent = Agent_AC(env, args)
+        agent.train()
+    
+    if args.train_break_ac_improved:
+        env_name = args.env_name or 'BreakoutNoFrameskip-v4'
+        env = Environment(env_name, args, atari_wrapper=True)
+        from agent_dir.agent_break_ac_improved import Agent_AC
+        agent = Agent_AC(env, args)
         agent.train()
 
     if args.test_pg:
