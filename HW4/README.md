@@ -50,4 +50,20 @@ XXX = dqn, dqn_improved, ddqn, dddqn
 for Deep Q-learning, Duel network, Double DQN, Duel and Double DQN
 
 
+## HW 4-3 Actor Critic
+
+### Game: Breakout & Pong
+
+This is a practice using AC for Breakout and Pong
+
+
+To train the model
+
+```
+python main.py --train_<game>_ac(_improved)
+```
+
+<game> = break or pong
+() is optional
+
 This practice is implemented on python 3.6.8, keras(2.2.4), h5py(2.9.0), numpy(1.14.5), tensorflow-gpu(1.9.0).
